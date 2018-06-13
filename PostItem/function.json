@@ -1,0 +1,28 @@
+{
+  "bindings": [{
+      "authLevel": "function",
+      "name": "req",
+      "type": "httpTrigger",
+      "direction": "in",
+      "methods": [
+        "get",
+        "post"
+      ]
+    },
+    {
+      "name": "$return",
+      "type": "http",
+      "direction": "out"
+    },
+    {
+      "type": "documentDB",
+      "name": "outputDocument",
+      "databaseName": "TablesDB",
+      "collectionName": "CollectionBook",
+      "createIfNotExists": true,
+      "connection": "example_DOCUMENTDB",
+      "direction": "out"
+    }
+  ],
+  "disabled": false
+}
